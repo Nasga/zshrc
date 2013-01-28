@@ -18,5 +18,5 @@ PROMPT_HOST="%n@%m "
 PROMPT_PWD="%20<…<%/% >"
 
 export PROMPT=$PROMPT_BEFORE$PROMPT_STATUS$PROMPT_HOST$PROMPT_PWD
-export RPROMPT="%{$fg[grey]%}%T%{$reset_color%}"
+export RPROMPT="%T%{$reset_color%}"
 
