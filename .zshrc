@@ -27,7 +27,7 @@ zstyle ':completion:*' menu select=1
 zstyle ':completion:*' original true
 
 # Add Hombrew to the path
-export PATH=/usr/local/bin:/usr/local/sbin/:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin/:/usr/local/share/npm/bin:$PATH
 # Keep 4k History
 export HISTSIZE=4096
 
