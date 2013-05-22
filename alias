@@ -1,0 +1,4 @@
+alias fs-start='freeswitch -nc -nonat'
+alias fs='fs_cli -p fslocal -P 8022'
+alias fs-stop='fs -x "shutdown now"'
+alias fs-reload='fs -x "reloadxml"'
