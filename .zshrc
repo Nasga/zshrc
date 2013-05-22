@@ -30,7 +30,12 @@ zstyle ':completion:*' original true
 export PATH=/usr/local/bin:/usr/local/sbin/:/usr/local/share/npm/bin:$PATH
 export PATH="$(brew --prefix php54)/bin:$PATH"
 # Keep 4k History
-export HISTSIZE=4096
+export HISTSIZE=SAVEHIST=4096
+export HISTFILE=~/.zsh_istory
+setopt hist_ignore_all_dups
+setopt append_history
+setopt extended_history
+setopt share_history
 
 # Silent rm *
 setopt rmstarsilent
