@@ -2,8 +2,13 @@
 
 Install : 
 
-    cd && git clone --recursive https://github.com/Nasga/zshrc.git .zsh && ln -s .zsh/.zshrc .zshrc
+`````bash
+cd && git clone --recursive https://github.com/Nasga/dotfiles-zshrc.git \
+  .dotfiles-zsh && ln -s .dotfiles-zsh/.zshrc .zshrc
+`````
 
 Update :
 
-    cd ~/.zsh && git pull --all && git submodule update --init --recursive
+`````bash
+cd ~/.zsh && git pull --all && git submodule update --init --recursive
+`````
