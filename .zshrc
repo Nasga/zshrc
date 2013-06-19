@@ -58,4 +58,4 @@ export PROMPT=$PROMPT_BEFORE$PROMPT_STATUS$PROMPT_HOST$PROMPT_PWD
 export RPROMPT="%{$fg[darkgrey]%}%T%{$reset_color%}"
 
 # Load alias
-source ~/.zsh/alias
+source ~/.dotfiles-zsh/alias
