@@ -23,3 +23,4 @@ alias dev='memcached -d -p 11211 -m 8 \
   && sudo postfix start \
   && mysql.server start \
   && fs-start'
+alias ll='LC_ALL=en_US.UTF-8 LANG=en ls++'
