@@ -1,3 +1,21 @@
+function countdown
+{
+  local SECONDS=$1
+  local START=$(date +%s)
+  local END=$((START+SECONDS))
+  local CURRENT=$START
+
+  while [[ $CURRENT -lt $END ]]
+  do
+    CURRENT=$(date +%s)
+    LEFT=$((END-CURRENT))
+    printf "\r%02d:%02d:%02d" \
+      $((LEFT/3600)) $(((LEFT/60)%60)) $((LEFT%60))
+    sleep 1
+  done
+}
+
+
 alias fs-start='freeswitch -nc -nonat'
 alias fs='fs_cli -p fslocal -P 8022'
 alias fs-stop='fs -x "shutdown now"'
@@ -24,3 +42,8 @@ alias dev='memcached -d -p 11211 -m 8 \
   && mysql.server start \
   && fs-start'
 alias ll='LC_ALL=en_US.UTF-8 LANG=en ls++'
+alias t5='countdown 300'
+alias t10='countdown 600'
+alias t15='countdown 900'
+alias t20='countdown 1200'
+alias t30='countdown 1800'
