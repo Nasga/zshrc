@@ -16,7 +16,6 @@ function countdown
 
   for i in {1..10}
   do
-    echo 'test'
     tput bel
     sleep 1
   done
