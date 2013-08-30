@@ -13,6 +13,13 @@ function countdown
       $((LEFT/3600)) $(((LEFT/60)%60)) $((LEFT%60))
     sleep 1
   done
+
+  for i in {1..10}
+  do
+    echo 'test'
+    tput bel
+    sleep 1
+  done
 }
 
 
