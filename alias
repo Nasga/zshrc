@@ -41,7 +41,7 @@ alias ........='cd ../../../../../../..'
 alias .7='........'
 alias h90='sudo shutdown -h +90'
 alias h120='sudo shutdown -h +120'
-alias dev='memcached -d -p 11211 -m 8 \
+alias dev='/usr/local/bin/memcached -d -p 11211 -m 8 \
   && redis-server /usr/local/etc/redis.conf \
   && mongod --fork \
   && sudo postfix start \
