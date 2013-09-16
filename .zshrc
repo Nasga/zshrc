@@ -28,7 +28,9 @@ zstyle ':completion:*' original true
 
 # Add Hombrew to the path
 export PATH=/usr/local/bin:/usr/local/sbin/:/usr/local/share/npm/bin:$PATH
-export PATH="$(brew --prefix php54)/bin:$PATH"
+if [ -e /usr/local/bin/brew ]; then
+  export PATH="$(brew --prefix php54)/bin:$PATH"
+fi
 # Keep 4k History
 export HISTSIZE=SAVEHIST=4096
 export HISTFILE=~/.zsh_istory
