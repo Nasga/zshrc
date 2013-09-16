@@ -10,5 +10,6 @@ cd && git clone --recursive https://github.com/Nasga/dotfiles-zshrc.git \
 Update :
 
 `````bash
-cd ~/.zsh && git pull --all && git submodule update --init --recursive
+cd ~/.dotfiles-zsh && git pull --all && \
+git submodule update --init --recursive
 `````
