@@ -49,8 +49,8 @@ alias dev='/usr/local/bin/memcached -d -p 11211 -m 8 \
   && redis-server /usr/local/etc/redis.conf \
   && mongod --fork \
   && sudo postfix start \
-  && mysql.server start \
-  && fs-start'
+  && /usr/local/opt/mariadb/bin/mysqld_safe \
+    --datadir=/usr/local/Cellar/mariadb/data &'
 alias ll='LC_ALL=en_US.UTF-8 LANG=en ls++'
 alias t5='countdown 300'
 alias t10='countdown 600'
@@ -60,3 +60,4 @@ alias t30='countdown 1800'
 alias v='vim'
 alias o='open'
 alias t='tmux'
+alias ls='ls -G'
