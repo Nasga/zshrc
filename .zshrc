@@ -28,6 +28,9 @@ zstyle ':completion:*' original true
 
 # Add Hombrew to the path
 export PATH=/usr/local/bin:/usr/local/sbin/:/usr/local/share/npm/bin:$PATH
+if [ -e /usr/local/freeswitch ]; then
+  export PATH=/usr/local/freeswitch/bin:$PATH
+fi
 if [ -e /usr/local/bin/brew ]; then
   export PATH="$(brew --prefix php54)/bin:$PATH"
 fi
