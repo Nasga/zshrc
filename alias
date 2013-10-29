@@ -50,8 +50,7 @@ alias dev='/usr/local/bin/memcached -d -p 11211 -m 8 \
   && mongod --fork \
   && sudo postfix start \
   && /usr/local/opt/mariadb/bin/mysqld_safe \
-    --datadir=/usr/local/Cellar/mariadb/data & \
-  && fs-start'
+    --datadir=/usr/local/Cellar/mariadb/data &'
 alias ll='LC_ALL=en_US.UTF-8 LANG=en ls++'
 alias t5='countdown 300'
 alias t10='countdown 600'
