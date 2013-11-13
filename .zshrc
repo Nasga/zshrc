@@ -32,7 +32,7 @@ if [ -e /usr/local/freeswitch ]; then
   export PATH=/usr/local/freeswitch/bin:$PATH
 fi
 if [ -e /usr/local/bin/brew ]; then
-  export PATH="$(brew --prefix php55)/bin:$PATH"
+  export PATH="$(brew --prefix josegonzalez/php/php55)/bin:$PATH"
 fi
 # Keep 4k History
 export HISTSIZE=SAVEHIST=4096
