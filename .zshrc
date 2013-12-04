@@ -27,7 +27,7 @@ zstyle ':completion:*' menu select=1
 zstyle ':completion:*' original true
 
 # Add Hombrew to the path
-export PATH=/usr/local/bin:/usr/local/sbin/:/usr/local/share/npm/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH
 if [ -e /usr/local/freeswitch ]; then
   export PATH=/usr/local/freeswitch/bin:$PATH
 fi
