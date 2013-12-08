@@ -56,7 +56,7 @@ POMPT_BEFORE="
 "
 PROMPT_STATUS="%(?.%{$fg[lightgreen]%}✔.%{$fg[red]%}✖) "
 PROMPT_HOST="%{$fg[grey]%}%n@%m "
-PROMPT_PWD="%{$fg[black]%}%{$bg[black]%}%{$fg[blue]%} %20<… <%/%<< %{$fg[blue]$bg[black]%}➤ "
+PROMPT_PWD="%{$fg[black]%}%{$fg[blue]%} %20<… <%/%<< %{$fg[blue]%}➤ "
 
 export PROMPT=$PROMPT_BEFORE$PROMPT_STATUS$PROMPT_HOST$PROMPT_PWD
 export RPROMPT="%{$fg[darkgrey]%}%T%{$reset_color%}"
