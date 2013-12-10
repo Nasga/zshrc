@@ -46,20 +46,14 @@ setopt share_history
 setopt rmstarsilent
 
 # Prompt
-fg[red]="[38;5;196m"
-fg[lightgreen]="[38;5;112m"
-fg[grey]="[38;5;102m"
-fg[blue]="[38;5;32m"
-fg[darkgrey]="[38;5;240m"
-
 POMPT_BEFORE="
 "
-PROMPT_STATUS="%(?.%{$fg[lightgreen]%}✔.%{$fg[red]%}✖) "
-PROMPT_HOST="%{$fg[grey]%}%n@%m "
+PROMPT_STATUS="%(?.%{$fg[green]%}✔.%{$fg[red]%}✖) "
+PROMPT_HOST="%{$fg_bold[grey]%}%n@%m "
 PROMPT_PWD="%{$fg[black]%}%{$fg[blue]%} %20<… <%/%<< %{$fg[blue]%}➤ "
 
 export PROMPT=$PROMPT_BEFORE$PROMPT_STATUS$PROMPT_HOST$PROMPT_PWD
-export RPROMPT="%{$fg[darkgrey]%}%T%{$reset_color%}"
+export RPROMPT="%{$fg_bold[grey]%}%T%{$reset_color%}"
 
 # Vim bindings
 bindkey -v
