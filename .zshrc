@@ -50,10 +50,11 @@ POMPT_BEFORE="
 "
 PROMPT_STATUS="%(?.%{$fg[green]%}✔.%{$fg[red]%}✖) "
 PROMPT_HOST="%{$fg_bold[grey]%}%n@%m "
-PROMPT_PWD="%{$fg[black]%}%{$fg[blue]%} %20<… <%/%<< %{$fg[blue]%}➤ "
+PROMPT_PWD="%{$fg[black]%}%{$fg[blue]%} %20<… <%/%<< %{$fg[blue]%}❯ "
 
-export PROMPT=$PROMPT_BEFORE$PROMPT_STATUS$PROMPT_HOST$PROMPT_PWD
-export RPROMPT="%{$fg_bold[grey]%}%T%{$reset_color%}"
+export PROMPT=$PROMPT_BEFORE$PROMPT_STATUS$PROMPT_PWD
+export RPROMPT="%{$fg_bold[grey]%}%n@%m%{$reset_color%}"
+
 
 # Vim bindings
 bindkey -v
