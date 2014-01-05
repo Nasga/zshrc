@@ -20,16 +20,38 @@ function countdown
     sleep 1
   done
 }
+
+function cc()
+{
+  fs -x 'callcenter_config '$@''
+}
+
+extract () {
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2) tar xvjf $1;;
+      *.tar.gz) tar xvzf $1;;
+      *.bz2) bunzip2 $1;;
+      *.rar) unrar x $1;;
+      *.gz) gunzip $1;;
+      *.tar) tar xvf $1;;
+      *.tbz2) tar xvjf $1;;
+      *.tgz) tar xvzf $1;;
+      *.zip) unzip $1;;
+      *.Z) uncompress $1;;
+      *.7z) 7za x $1;;
+      *) echo "'$1' cannot be extracted via >extract<" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
+
 alias fs-start='freeswitch -nc -nonat'
 alias fs='fs_cli -p fslocal -P 8022'
 alias fs-stop='fs -x "shutdown now"'
 alias fs-reload='fs -x "reloadxml"'
-function callcenter()
-{
-  cmd=$@
-  fs -x 'callcenter_config '$cmd''
-}
-alias cc='callcenter'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias .2='...'
@@ -51,7 +73,6 @@ alias dev='/usr/local/bin/memcached -d -p 11211 -m 8 \
   && sudo postfix start \
   && /usr/local/opt/mariadb/bin/mysqld_safe \
     --datadir=/usr/local/Cellar/mariadb/data &'
-alias ll='LC_ALL=en_US.UTF-8 LANG=en ls++'
 alias t5='countdown 300'
 alias t10='countdown 600'
 alias t15='countdown 900'
@@ -60,4 +81,10 @@ alias t30='countdown 1800'
 alias v='vim'
 alias o='open'
 alias tm='tmux'
+alias g='grep --color=auto'
 alias ls='ls -G'
+
+
+alias -g V='| vim -'
+alias -g G='| g'
+alias -g A='| ag'
