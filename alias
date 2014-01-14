@@ -47,6 +47,10 @@ extract () {
   fi
 }
 
+tac () {
+  awk '1 { last = NR; line[last] = $0; } END { for (i = last; i > 0; i--) { print line[i]; } }'
+}
+
 
 alias fs-start='freeswitch -nc -nonat'
 alias fs='fs_cli -p fslocal -P 8022'
