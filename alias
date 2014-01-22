@@ -87,6 +87,7 @@ alias o='open'
 alias tm='tmux'
 alias g='grep --color=auto'
 alias ls='ls -G'
+command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.eu"
 
 
 alias -g V='| vim -'
