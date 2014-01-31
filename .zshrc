@@ -62,5 +62,7 @@ bindkey -v
 
 # Load alias
 source ~/.dotfiles-zsh/alias
+# Load syntax hl
+source ~/.dotfiles-zsh/zsh-syntax-highlighting.zsh
 
 # vim: set tw=72 cc=73 ai ft=zsh fdm=marker:
