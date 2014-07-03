@@ -66,3 +66,6 @@ source ~/.dotfiles-zsh/alias
 source ~/.dotfiles-zsh/zsh-syntax-highlighting.zsh
 
 # vim: set tw=72 cc=73 ai ft=zsh fdm=marker:
+
+# added by travis gem
+[ -f /Users/Nasga/.travis/travis.sh ] && source /Users/Nasga/.travis/travis.sh

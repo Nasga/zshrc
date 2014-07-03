@@ -1,26 +1,3 @@
-function countdown
-{
-  local SECONDS=$1
-  local START=$(date +%s)
-  local END=$((START+SECONDS))
-  local CURRENT=$START
-
-  while [[ $CURRENT -lt $END ]]
-  do
-    CURRENT=$(date +%s)
-    LEFT=$((END-CURRENT))
-    printf "\r%02d:%02d:%02d" \
-      $((LEFT/3600)) $(((LEFT/60)%60)) $((LEFT%60))
-    sleep 1
-  done
-
-  for i in {1..10}
-  do
-    tput bel
-    sleep 1
-  done
-}
-
 function cc()
 {
   fs -x 'callcenter_config '$@''
@@ -77,11 +54,12 @@ alias dev='/usr/local/bin/memcached -d -p 11211 -m 8 \
   && sudo postfix start \
   && /usr/local/opt/mariadb/bin/mysqld_safe \
     --datadir=/usr/local/Cellar/mariadb/data &'
-alias t5='countdown 300'
-alias t10='countdown 600'
-alias t15='countdown 900'
-alias t20='countdown 1200'
-alias t30='countdown 1800'
+alias pomo="pomojs --log ~/.pomo.log --tmux -q"
+alias t5='pomo -w 5'
+alias t10='pomo -w 10'
+alias t15='pomo -w 15'
+alias t20='pomo -w 20'
+alias t30='pomo -w 30'
 alias vim='vim -w ~/.vimlog "$@"'
 alias v='vim'
 alias o='open'
