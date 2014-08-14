@@ -63,6 +63,7 @@ alias t20='pomo -w 20'
 alias t30='pomo -w 30'
 alias vim='vim -w ~/.vimlog "$@"'
 alias v='vim'
+alias n='nvim'
 alias o='open'
 alias tm='tmux'
 alias g='grep --color=auto'
@@ -71,6 +72,11 @@ alias :q='exit'
 command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.eu"
 command -v fasd > /dev/null && eval \
   "$(fasd --init posix-alias zsh-hook zsh-ccomp zsh-wcomp)"
+alias hl='highlight \
+  --out-format xterm256 \
+  --style rdark \
+  --line-numbers \
+  --syntax'
 
 
 alias -g V='| vim -'
